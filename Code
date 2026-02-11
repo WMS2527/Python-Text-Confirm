@@ -1,0 +1,19 @@
+# Take text input, repeat text input, take confirmation input
+
+def confirmation():
+    input_y = ["Yes", "yes", "Yes.", "yes."]
+    input_n = ["No", "no", "No.", "no."]
+    print("You typed: "+user_text)
+    confirm_in = input("\nIs this correct?\n")
+    if confirm_in in input_y:
+        print("\nChecking... Input confirmed")
+    elif confirm_in in input_n:
+        print("\nChecking... Input conformation false")
+    else:
+        print("\nInvalid input.\nConfirmation requires yes or no")
+        print("Confirmation input does not accept capitalization of any letter except first")
+        print("Confirmation does not accept any punctuation except periods (.)\n")
+        confirmation()
+    
+user_text = input("Type something and press Enter\n")
+confirmation()
